@@ -22,4 +22,8 @@ python3 webhook_receiver.py --host 127.0.0.1 --port 8765
 
 ## Deploy
 
-This repo is deployed on Render as a Python web service from `render.yaml`.
+- Render: this repo deploys as a Python web service from `render.yaml`
+  (uses `webhook_receiver.py`).
+- PythonAnywhere (free Beginner account, no card required): create a manual
+  web app from this repo and point its WSGI file at `wsgi.py`, with the
+  `WEBHOOK_VERIFY_TOKEN` environment variable set.
